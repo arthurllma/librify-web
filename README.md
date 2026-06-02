@@ -26,7 +26,7 @@ O sistema foi totalmente modelado via UML (Casos de Uso e Diagramas de Atividade
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 O ecossistema do projeto foi construído utilizando práticas modernas de desenvolvimento:
 * **Backend:** Java com Spring Boot 
