@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Login</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="logo-icon">📖</div>
+    <h1>Librify</h1>
+    <p class="subtitle">Bem-vindo de volta!</p>
+
+    <div id="alertMsg" class="alert"></div>
+
+    <form id="loginForm">
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="seu@email.com" autocomplete="email">
+        </div>
+        <div class="input-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-dark">Entrar</button>
+    </form>
+
+    <div class="links-container">
+        <a href="pages/recuperar-senha.html">Esqueceu a senha?</a>
+        <a href="pages/cadastro.html">Não tem uma conta? Cadastre-se</a>
+        <a href="pages/admin/admin-livros.html" style="color:var(--gray);font-size:11px;margin-top:8px">Acesso Administrador</a>
+    </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
