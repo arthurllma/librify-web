@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Catálogo</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+</head>
+<body data-page="catalogo">
+
+<div class="page-container">
+
+    <!-- RF07 – Header e busca -->
+    <div class="catalogo-header">
+        <h1>Catálogo</h1>
+
+        <!-- RF07.1 – Busca -->
+        <div class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Buscar por título ou autor...">
+        </div>
+
+        <!-- RF07.2 – Filtro por categoria -->
+        <div class="categorias-scroll" id="categorias">
+            <!-- Preenchido pelo catalogo.js -->
+        </div>
+    </div>
+
+    <!-- RF07.3 – Grade de livros -->
+    <div class="livros-grid" id="livrosGrid">
+        <!-- Preenchido pelo catalogo.js -->
+    </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/catalogo.js"></script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>

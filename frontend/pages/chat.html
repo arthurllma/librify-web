@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Chat</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body data-page="">
+
+<div class="page-container" style="padding-bottom:0">
+
+    <div class="chat-container">
+
+        <!-- Cabeçalho do chat -->
+        <div class="chat-header">
+            <a href="perfil.html" style="font-size:20px;text-decoration:none;color:var(--dark)">←</a>
+            <div class="chat-avatar">🤖</div>
+            <div>
+                <div class="chat-name">Assistente Librify</div>
+                <div class="chat-status">● Online</div>
+            </div>
+        </div>
+
+        <!-- RF17.1 – Mensagens -->
+        <div class="chat-messages" id="chatMessages">
+            <!-- Preenchido pelo chat.js -->
+        </div>
+
+        <!-- RF17.2 – Campo de texto -->
+        <div class="chat-input-area">
+            <textarea
+                id="chatInput"
+                class="chat-input"
+                placeholder="Digite sua mensagem"
+                rows="1"></textarea>
+            <button class="send-btn" id="sendBtn">➤</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/chat.js"></script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>

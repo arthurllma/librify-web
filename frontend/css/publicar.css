@@ -1,0 +1,59 @@
+.publicar-intro {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.publicar-intro h2 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+.publicar-intro p { font-size: 13px; opacity: 0.85; }
+
+.form-section {
+    background: var(--white);
+    margin: 16px;
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.form-section h3 { font-size: 15px; font-weight: 700; margin-bottom: 16px; color: var(--dark); }
+
+/* Upload de arquivo (RF12.1) */
+.upload-area {
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--bg);
+}
+
+.upload-area:hover, .upload-area.drag-over {
+    border-color: var(--primary);
+    background: #EEF3FE;
+}
+
+.upload-icon { font-size: 32px; margin-bottom: 8px; }
+.upload-text { font-size: 14px; color: var(--gray); margin-bottom: 4px; }
+.upload-hint { font-size: 11px; color: var(--gray); opacity: 0.7; }
+.upload-area input[type="file"] { display: none; }
+.upload-area.has-file { border-color: var(--success); background: #E6F4EA; }
+
+/* Status (RF13) */
+.status-list { display: flex; flex-direction: column; gap: 10px; margin: 0 16px 16px; }
+
+.status-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.status-icon { font-size: 24px; }
+.status-info { flex: 1; }
+.status-titulo { font-size: 14px; font-weight: 600; color: var(--dark); }
+.status-data { font-size: 11px; color: var(--gray); margin-top: 2px; }

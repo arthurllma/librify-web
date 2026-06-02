@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Admin</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+</head>
+<body>
+
+<div class="page-container" style="padding-bottom:0">
+
+    <!-- RF18 – Cabeçalho admin -->
+    <div class="admin-header">
+        <div>
+            <h1>📖 Librify Admin</h1>
+            <div style="font-size:12px;opacity:0.7;margin-top:2px" id="adminNome"></div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+            <span class="badge-admin">Admin</span>
+            <button onclick="Auth.logout()" style="background:none;border:none;color:white;font-size:13px;cursor:pointer">Sair</button>
+        </div>
+    </div>
+
+    <!-- Navegação das abas -->
+    <div class="admin-nav">
+        <a class="admin-nav-item active" href="#" onclick="mostrarAba('livros')">📚 Livros</a>
+        <a class="admin-nav-item" href="#" onclick="mostrarAba('publicacoes')">📝 Publicações</a>
+        <a class="admin-nav-item" href="#" onclick="mostrarAba('mes')">🌟 Livro do Mês</a>
+    </div>
+
+    <div id="alertMsg" class="alert" style="margin:16px"></div>
+
+    <!-- RF19 – Gestão de Livros -->
+    <div id="abaLivros" class="admin-content">
+        <button id="btnNovoLivro" class="btn btn-primary" style="margin-bottom:16px">+ Novo livro</button>
+        <div id="listaLivros"></div>
+    </div>
+
+    <!-- RF20 – Aprovação de Publicações -->
+    <div id="abaPublicacoes" class="admin-content" style="display:none">
+        <div class="section-title" style="margin-bottom:12px">Publicações pendentes</div>
+        <div id="listaPendentes"></div>
+    </div>
+
+    <!-- RF21 – Livro do Mês -->
+    <div id="abaMes" class="admin-content" style="display:none">
+        <div class="card">
+            <div class="section-title" style="margin-bottom:12px">Definir Livro do Mês</div>
+            <p style="font-size:13px;color:var(--gray);margin-bottom:16px">
+                Selecione um livro do catálogo para ser exibido como destaque na tela inicial.
+            </p>
+            <div class="input-group">
+                <label>Livro selecionado</label>
+                <select id="selectLivroDoMes"></select>
+            </div>
+            <button id="btnDefinirMes" class="btn btn-primary">✅ Confirmar seleção</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal – Cadastrar/Editar Livro -->
+<div class="modal-overlay" id="modalLivro">
+    <div class="modal-sheet">
+        <div class="modal-title">
+            <span id="modalTitulo">Novo Livro</span>
+            <button class="modal-close" id="fecharModalLivro">✕</button>
+        </div>
+        <form id="formLivro">
+            <div class="input-group">
+                <label>Título *</label>
+                <input type="text" id="fTitulo" placeholder="Título do livro">
+            </div>
+            <div class="input-group">
+                <label>Autor *</label>
+                <input type="text" id="fAutor" placeholder="Nome do autor">
+            </div>
+            <div class="input-group">
+                <label>Categoria</label>
+                <input type="text" id="fCategoria" placeholder="Ex: Ficção Científica">
+            </div>
+            <div class="input-group">
+                <label>Descrição</label>
+                <textarea id="fDescricao" placeholder="Sinopse do livro" style="min-height:80px"></textarea>
+            </div>
+            <div class="input-group">
+                <label>URL da capa (opcional)</label>
+                <input type="text" id="fCapaUrl" placeholder="https://...">
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+    </div>
+</div>
+
+<script src="../../js/api.js"></script>
+<script src="../../js/auth.js"></script>
+<script>
+    // Exibir nome do admin
+    document.getElementById('adminNome').textContent = Auth.getUser()?.nome || '';
+
+    function mostrarAba(aba) {
+        ['livros','publicacoes','mes'].forEach(a => {
+            document.getElementById(`aba${a.charAt(0).toUpperCase()+a.slice(1)}`).style.display = a === aba ? 'block' : 'none';
+        });
+        document.querySelectorAll('.admin-nav-item').forEach((el, i) => {
+            el.classList.toggle('active', ['livros','publicacoes','mes'][i] === aba);
+        });
+    }
+
+    window.mostrarAba = mostrarAba;
+</script>
+<script src="../../js/admin.js"></script>
+</body>
+</html>

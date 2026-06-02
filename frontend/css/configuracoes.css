@@ -1,0 +1,35 @@
+.config-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+
+.config-item {
+    background: var(--white);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.config-item:hover { background: var(--bg); }
+.config-item:first-child { border-radius: var(--radius) var(--radius) 0 0; }
+.config-item:last-child { border-radius: 0 0 var(--radius) var(--radius); }
+
+.config-icon { font-size: 20px; }
+.config-label { font-size: 15px; color: var(--dark); flex: 1; }
+.config-arrow { font-size: 14px; color: var(--gray); }
+.config-item.danger .config-label { color: var(--error); }
+
+.config-section-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--gray);
+    padding: 16px 16px 8px;
+}
+
+/* Modal senha */
+.senha-form { padding: 20px 16px; }

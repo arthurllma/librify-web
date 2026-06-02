@@ -1,0 +1,158 @@
+.home-header {
+    background: var(--white);
+    padding: 20px 16px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.greeting {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+
+.greeting-sub { font-size: 13px; color: var(--gray); }
+
+.home-header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.notif-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px;
+    position: relative;
+    line-height: 1;
+    margin-top: 4px;
+}
+
+/* Livro do Mês (RF05.1) */
+.livro-do-mes-banner {
+    margin: 16px;
+    background: linear-gradient(135deg, #1A73E8, #0D47A1);
+    border-radius: var(--radius);
+    padding: 20px;
+    color: white;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(26,115,232,0.35);
+}
+
+.livro-do-mes-banner .capa {
+    width: 80px;
+    height: 110px;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.livro-do-mes-banner .badge {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+
+.livro-do-mes-banner .titulo {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.livro-do-mes-banner .autor { font-size: 12px; opacity: 0.8; margin-bottom: 14px; }
+
+.livro-do-mes-banner .btn-ver {
+    display: inline-block;
+    background: white;
+    color: var(--primary);
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: auto;
+}
+
+/* Seções horizontais (RF05.2, RF05.3) */
+.livros-section { margin-bottom: 8px; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-bottom: 10px;
+}
+
+.section-header a {
+    font-size: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.livros-scroll {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 16px 8px;
+    scrollbar-width: none;
+}
+
+.livros-scroll::-webkit-scrollbar { display: none; }
+
+.livro-card-mini {
+    flex-shrink: 0;
+    width: 110px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.livro-card-mini .capa-mini {
+    width: 110px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 8px;
+    box-shadow: var(--shadow);
+}
+
+.livro-card-mini .titulo-mini {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.3;
+    margin-bottom: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.livro-card-mini .autor-mini { font-size: 11px; color: var(--gray); }
+
+.livro-card-mini .rating-mini {
+    font-size: 11px;
+    color: var(--warning);
+    margin-top: 2px;
+}

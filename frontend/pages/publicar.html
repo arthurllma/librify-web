@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Publicar</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/publicar.css">
+</head>
+<body data-page="publicar">
+
+<div class="page-container">
+
+    <div class="publicar-intro">
+        <h2>✍️ Publique seu livro</h2>
+        <p>Compartilhe sua obra com a comunidade Librify</p>
+    </div>
+
+    <div id="alertMsg" class="alert" style="margin:16px"></div>
+
+    <!-- RF12 – Formulário de publicação -->
+    <div class="form-section">
+        <h3>Informações do livro</h3>
+        <form id="publicarForm">
+            <div class="input-group">
+                <label for="titulo">Título *</label>
+                <input type="text" id="titulo" placeholder="Título do seu livro">
+            </div>
+            <div class="input-group">
+                <label for="autor">Autor *</label>
+                <input type="text" id="autor" placeholder="Nome do autor">
+            </div>
+            <div class="input-group">
+                <label for="genero">Gênero</label>
+                <select id="genero">
+                    <option value="">Selecione...</option>
+                    <option>Ficção</option>
+                    <option>Ficção Científica</option>
+                    <option>Fantasia</option>
+                    <option>Romance</option>
+                    <option>Terror</option>
+                    <option>Suspense</option>
+                    <option>Literatura Brasileira</option>
+                    <option>Crônica</option>
+                    <option>Poesia</option>
+                    <option>História</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" placeholder="Sobre o que é o seu livro?"></textarea>
+            </div>
+            <div class="input-group">
+                <label>Arquivo PDF</label>
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📄</div>
+                    <div class="upload-text" id="uploadText">Clique para selecionar ou arraste o PDF aqui</div>
+                    <div class="upload-hint">Apenas arquivos PDF · Máx. 50MB</div>
+                    <input type="file" id="arquivoInput" accept=".pdf">
+                </div>
+            </div>
+            <!-- RF12.2 – Botão enviar -->
+            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar para avaliação</button>
+        </form>
+    </div>
+
+    <!-- RF13 – Status das publicações -->
+    <div style="padding:0 16px;margin-bottom:8px">
+        <div class="section-title">Minhas publicações</div>
+    </div>
+    <div id="minhasPublicacoes" class="status-list">
+        <!-- Preenchido pelo publicar.js -->
+    </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/publicar.js"></script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>

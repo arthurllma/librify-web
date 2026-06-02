@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Notificações</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/notificacoes.css">
+</head>
+<body data-page="">
+
+<div class="page-container">
+
+    <div class="page-header">
+        <a href="home.html" class="btn-back">←</a>
+        <h1 style="flex:1">Notificações</h1>
+        <button id="btnMarcarLidas" class="marcar-lidas-btn">Marcar todas como lidas</button>
+    </div>
+
+    <div style="padding:12px 16px;font-size:13px;color:var(--gray)" id="contadorNaoLidas"></div>
+
+    <!-- RF14 – Lista de notificações -->
+    <div id="listaNotifs">
+        <!-- Preenchido pelo notificacoes.js -->
+    </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/notificacoes.js"></script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Configurações</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/configuracoes.css">
+</head>
+<body data-page="perfil">
+
+<div class="page-container">
+
+    <div class="page-header">
+        <a href="perfil.html" class="btn-back">←</a>
+        <h1>Configurações</h1>
+    </div>
+
+    <div class="config-section-title">Conta</div>
+    <div class="config-list" style="margin:0 16px;border-radius:var(--radius);overflow:hidden">
+        <!-- RF16.1 – Alterar senha -->
+        <button id="btnAlterarSenha" class="config-item">
+            <span class="config-icon">🔒</span>
+            <span class="config-label">Alterar senha</span>
+            <span class="config-arrow">›</span>
+        </button>
+        <button class="config-item" onclick="alert('Em breve!')">
+            <span class="config-icon">✏️</span>
+            <span class="config-label">Editar perfil</span>
+            <span class="config-arrow">›</span>
+        </button>
+    </div>
+
+    <div class="config-section-title">Sessão</div>
+    <div class="config-list" style="margin:0 16px;border-radius:var(--radius);overflow:hidden">
+        <!-- RF16.2 – Sair da conta -->
+        <button id="btnSair" class="config-item danger">
+            <span class="config-icon">🚪</span>
+            <span class="config-label">Sair da conta</span>
+        </button>
+    </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/configuracoes.js"></script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>

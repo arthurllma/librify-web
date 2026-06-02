@@ -1,0 +1,64 @@
+.historico-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 14px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.historico-capa {
+    width: 52px;
+    height: 72px;
+    border-radius: 6px;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.historico-info { flex: 1; }
+
+.historico-titulo { font-size: 14px; font-weight: 600; color: var(--dark); margin-bottom: 2px; }
+.historico-autor { font-size: 12px; color: var(--gray); margin-bottom: 8px; }
+
+.historico-datas { display: flex; flex-direction: column; gap: 2px; }
+
+.data-row {
+    display: flex;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.data-row .label { font-weight: 600; color: var(--dark); min-width: 90px; }
+
+.tabs {
+    display: flex;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.tab {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray);
+    cursor: pointer;
+    border: none;
+    background: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}

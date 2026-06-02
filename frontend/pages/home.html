@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Home</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body data-page="home">
+
+<div class="page-container">
+
+    <!-- Cabeçalho personalizado (RF05) -->
+    <div class="home-header">
+        <div class="home-header-actions">
+            <div>
+                <div class="greeting">Olá, <span id="nomeUsuario">...</span> 👋</div>
+                <div class="greeting-sub">O que vamos ler hoje?</div>
+            </div>
+            <a href="notificacoes.html" class="notif-btn">🔔</a>
+        </div>
+    </div>
+
+    <!-- RF05.1 + RF06 – Livro do Mês -->
+    <div id="livroDoMesBanner" class="livro-do-mes-banner">
+        <div id="ldmCapa" class="capa">📖</div>
+        <div>
+            <div class="badge">📅 Livro do Mês</div>
+            <div class="titulo" id="ldmTitulo">Carregando...</div>
+            <div class="autor" id="ldmAutor"></div>
+            <button class="btn-ver" id="ldmVerBtn">Ver detalhes →</button>
+        </div>
+    </div>
+
+    <!-- RF05.2 – Livros em Destaque -->
+    <div class="livros-section">
+        <div class="section-header">
+            <span class="section-title">📚 Livros em Destaque</span>
+            <a href="catalogo.html">Ver todos</a>
+        </div>
+        <div class="livros-scroll" id="destaques">
+            <!-- Preenchido pelo home.js -->
+        </div>
+    </div>
+
+    <!-- RF05.3 – Recomendados para você -->
+    <div class="livros-section" style="margin-bottom:16px">
+        <div class="section-header">
+            <span class="section-title">✨ Recomendados para você</span>
+        </div>
+        <div class="livros-scroll" id="recomendados">
+            <!-- Preenchido pelo home.js -->
+        </div>
+    </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/home.js"></script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>

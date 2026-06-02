@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librify – Detalhes do Livro</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/detalhes.css">
+</head>
+<body data-page="catalogo">
+
+<div class="page-container">
+
+    <!-- RF08 – Hero com capa e info -->
+    <div class="detalhes-hero">
+        <a href="javascript:history.back()" class="btn-back-hero">←</a>
+        <div id="livroCapaEl" class="capa">📖</div>
+        <div class="meta">
+            <div class="titulo" id="livroTitulo">Carregando...</div>
+            <div class="autor" id="livroAutor"></div>
+            <span class="tag tag-blue" id="livroCat"></span>
+        </div>
+    </div>
+
+    <div class="page-content">
+
+        <!-- Média de avaliações (RF09.3) -->
+        <div class="card" style="margin-bottom:16px">
+            <div class="rating-summary">
+                <span class="rating-big" id="livroMediaNota">0.0</span>
+                <span class="rating-stars-big" id="livroEstrelasMedia">☆☆☆☆☆</span>
+                <span class="rating-count" id="livroTotalAval">(0)</span>
+            </div>
+        </div>
+
+        <!-- Descrição -->
+        <div class="card" style="margin-bottom:16px">
+            <div class="section-title" style="margin-bottom:8px">Sobre o livro</div>
+            <p class="descricao-text" id="livroDescricao"></p>
+        </div>
+
+        <!-- RF08.1 – Botões de ação -->
+        <div class="acoes-container">
+            <button id="btnReservar" class="btn btn-primary">📚 Reservar livro</button>
+            <button id="btnAvaliar" class="btn btn-outline">⭐ Avaliar livro</button>
+        </div>
+
+        <!-- RF09.4 – Lista de avaliações -->
+        <div class="card">
+            <div class="section-title">Avaliações</div>
+            <div id="listaAvaliacoes">
+                <!-- Preenchido pelo JS -->
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal de avaliação (RF09.1 e RF09.2) -->
+<div class="modal-overlay" id="modalAvaliacao">
+    <div class="modal-sheet">
+        <div class="modal-title">Avaliar livro</div>
+
+        <div class="stars-input" id="starsInput">
+            <span class="star" data-valor="1">★</span>
+            <span class="star" data-valor="2">★</span>
+            <span class="star" data-valor="3">★</span>
+            <span class="star" data-valor="4">★</span>
+            <span class="star" data-valor="5">★</span>
+        </div>
+
+        <form id="formAvaliacao">
+            <div class="input-group">
+                <label for="comentarioInput">Comentário (opcional)</label>
+                <textarea id="comentarioInput" placeholder="Compartilhe sua opinião..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar avaliação</button>
+            <button type="button" id="fecharModal" class="btn btn-outline" style="margin-top:8px">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/detalhes-livro.js"></script>
+<script src="../js/navbar.js"></script>
+</body>
+</html>
