@@ -9,7 +9,7 @@ Este software foi desenvolvido como parte de um **Projeto de Extensão da Univer
 ## Contexto Acadêmico
 * **Instituição:** Universidade de Fortaleza (UNIFOR)
 * **Curso:** Ciência da Computação
-* **Disciplina:** Resolução de Problemas de Natureza Discreta
+* **Disciplina:** Requisitos e Modelagem de Sistemas
 * **Natureza:** Projeto de Extensão Universitária
 * **Orientador/Professor:** Prof. Pedro Pinheiro
 
