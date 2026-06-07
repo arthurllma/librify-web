@@ -11,7 +11,7 @@ Este software foi desenvolvido como parte de um **Projeto de Extensão da Univer
 * **Curso:** Ciência da Computação
 * **Disciplina:** Requisitos e Modelagem de Sistemas
 * **Natureza:** Projeto de Extensão Universitária
-* **Orientador/Professor:** Prof. Pedro Pinheiro
+* **Orientador/Professor:** Dr. Pedro Pinheiro
 
 ---
 
